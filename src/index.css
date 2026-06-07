@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+/* ===== 思源字体 + 更舒适的中文阅读体验 ===== */
+:root {
+  --text-primary: #1A1A1A;
+  --text-secondary: #6B7280;
+  --text-tertiary: #9CA3AF;
+  --bg-primary: #F9F9F6;
+  --bg-card: #FFFFFF;
+  --bg-hover: #F2F2EE;
+  --border: #E8E8E4;
+  --accent: #2563EB;
+  --accent-light: #EEF2FF;
+  --accent-text: #1D4ED8;
+  --radius: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.02em;
+}
+
+/* 法条等文本用等宽字体 */
+.font-mono, pre, code, .law-text {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', Consolas, monospace !important;
+}
+
+/* 卡片悬停微动 */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  border-color: #D0D0CC;
+}
+
+/* 链接 */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D8D8D4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #C0C0BA; }
+
+/* 过渡 */
+.trans { transition: all 0.15s ease; }
+
+/* 选中文本 */
+::selection { background: #2563EB22; color: var(--text-primary); }
